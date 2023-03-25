@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" size="100%">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spotify Tracker</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+
+<style>
+    a:link {
+        color: rgb(251, 207, 244);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(30, 30, 30);
+        background-color:rgb(251, 207, 244);
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(251, 207, 244);
+        text-decoration: none;
+    }
+
+    a:visited:hover {
+        color: rgb(30, 30, 30);
+        background-color:rgb(251, 207, 244);
+        text-decoration: none;
+    }
+
+    .linkProj:link {
+        color: rgb(30,30,30);
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    .linkProj:hover {
+        color: rgb(251, 207, 244);
+        background-color:rgb(30,30,30);
+        text-decoration: none;
+    }
+
+    .linkProj:visited {
+        color: rgb(30,30,30);
+        text-decoration: none;
+    }
+
+    .linkProj:visited:hover {
+        color: rgb(251, 207, 244);
+        background-color:rgb(30,30,30);
+        text-decoration: none;
+    }
+
+    .navPierce {
+        color: rgb(251, 207, 244);
+        margin: 1rem;
+        font-size: 30px;
+    }
+
+    .active {
+        background-color: rgb(240, 220, 223);
+    }
+
+    .textPierceL {
+        text-align: center;
+        color: rgb(251, 207, 244);
+        font-family: "Yu Gothic", "Verdana", "sans-serif";
+        margin-bottom: 1rem
+    }
+
+    .textPierceS {
+        font-family: "Tahoma", "sans-serif";
+        font-size: 25px;
+    }
+
+    p {
+        font-family: "Tahoma", "sans-serif";
+    }
+
+    .boxPierceAbout {
+        width: 60%;
+        height: 70%;
+        background: rgb(30,30,30);
+        background: linear-gradient(90deg, rgba(30,30,30,1) 0%, rgba(251, 207, 244,1) 1%, rgba(251, 207, 244,1) 50%, rgba(251, 207, 244,1) 99%, rgba(30,30,30,1) 100%);            
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5rem; 
+        padding: 1rem;
+    }
+
+    .boxPierceText {
+        width: 40%;
+        background: rgb(30,30,30);
+        background: linear-gradient(90deg, rgba(30,30,30,1) 0%, rgba(251, 207, 244,1) 1%, rgba(251, 207, 244,1) 50%, rgba(251, 207, 244,1) 99%, rgba(30,30,30,1) 100%);
+        padding-left: 1rem; 
+        padding-right: 1rem;
+        border: 2px solid rgb(30, 30, 30);
+    }
+
+    /* #login {
+    display: none;
+  }
+
+     #loggedin {
+    display: none;
+  } */
+
+</style>
+</head>
+
+<body style="background-color: rgb(30, 30, 30);margin-bottom: 10rem;">  
+    <div style="position:absolute; top: -0.1rem" class="navPierce">
+        <a href="/" style="padding:1rem"><b>PR</b></a>
+    </div>
+    <div class="d-flex justify-content-end navPierce" style="margin-bottom: 2rem">
+        <div>
+            <a href="/" style="padding:1rem"><b>Home</b></a>
+        </div>
+        <div>
+            <a href="/game.html" style="padding:1rem"><b>Typemaster</b></a>
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/in/pierce-renio-757537179" style="padding:1rem"><b>LinkedIn</b></a>
+        </div>
+        <div>
+            <a href="https://github.com/prenio" style="padding:1rem"><b>GitHub</b></a>
+        </div>
+      </div>
+    </div>
+
+    <html>
+
+
+
+ <div class="boxPierceAbout">
+    <div id="login">
+     <h1>First, log in to spotify</h1>
+     <a href="/login">Log in</a>
+    </div>
+    <div id="loggedin">
+    </div>
+ </div>
+
+ <script id="loggedin-template" type="text/x-handlebars-template">
+    <h1>Logged in as </h1>
+    <img id="avatar" width="200" src="" />
+    <dl>
+     <dt>Display name</dt><dd></dd>
+     <dt>Username</dt><dd></dd>
+     <dt>Email</dt><dd></dd>
+     <dt>Spotify URI</dt><dd><a href=""></a></dd>
+     <dt>Link</dt><dd><a href=""></a></dd>
+     <dt>Profile Image</dt><dd></dd>
+    </dl>
+    <p><a href="/">Log in again</a></p>
+ </script>
+
+
+
+
+
+
+
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script defer src="/static/js/spotify.js"></script>
+</body>
+</html>
