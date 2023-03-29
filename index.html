@@ -10,6 +10,12 @@
 
 
 <style>
+    .bodyHome{
+        background-color: rgb(30, 30, 30);
+        margin-bottom: 10rem; 
+        margin-top: 6rem;
+    }
+
     .profile {
         display: block;
         border-radius: 50%;
@@ -74,12 +80,15 @@
 
     .navPierce {
         color: rgb(251, 207, 244);
-        margin: 1rem;
         font-size: 30px;
     }
 
     .active {
         background-color: rgb(240, 220, 223);
+    }
+
+    .textPierceAboutS{
+        font-size: 20px;
     }
 
     .textPierceL {
@@ -119,28 +128,92 @@
     }
 
 
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(30, 30, 30);
+        min-width: 160px;
+        }
+
+    .dropdown-content a {
+        float: none;
+        color: rgb(251, 207, 244);
+        padding: 12px 16px;
+        display: block;
+        }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+        }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown a:visited{
+        color:rgb(251, 207, 244);
+    }
+
+    /* #skills {
+        class
+    } */
+
+
+@media only screen and (max-width: 600px) {
+
+    .profile{
+        width:40%;
+        height:40%;
+    }
+
+    .boxPierceAbout {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        word-wrap: normal;
+        margin-bottom: 5rem; 
+    }
+
+    .textPierceAboutS{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        font-size: 14px;
+    }
+}
+
 </style>
 </head>
 
-<body style="background-color: rgb(30, 30, 30);margin-bottom: 10rem;">  
-    <div style="position:absolute; top: -0.1rem" class="navPierce">
-        <a href="/" style="padding:1rem"><b>PR</b></a>
-    </div>
-    <div class="d-flex justify-content-end navPierce" style="margin-bottom: 2rem">
-        <div>
-            <a href="/" style="padding:1rem"><b>Home</b></a>
+<body class="bodyHome d-flex flex-column justify-content-around">  
+
+<header>
+    <nav class="navbar navbar-expand navbar-toggleable fixed-top" style="background-color: rgb(30, 30, 30); border-bottom: 2px solid rgb(251, 207, 244);">
+        <div class="container">
+            <a href="/" class="navPierce navbar-nav"><b>PR</b></a>
+            <div class="navbar-collapse collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link navPierce" title="Pierce Renio"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/game.html" class="nav-link navPierce" title="Typemaster"><b>Typemaster</b></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item dropdown">
+                        <a href="" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link navPierce dropdown-toggle"><b>Links</b></a>
+                        <div class="dropdown-content">
+                            <a href="https://www.linkedin.com/in/pierce-renio-757537179" class="navPierce"><b>LinkedIn</b></a>
+                            <a href="https://github.com/prenio" class="navPierce"><b>GitHub</b></a>
+                          </div> 
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <a href="/game.html" style="padding:1rem"><b>Typemaster</b></a>
-        </div>
-        <div>
-            <a href="https://www.linkedin.com/in/pierce-renio-757537179" style="padding:1rem"><b>LinkedIn</b></a>
-        </div>
-        <div>
-            <a href="https://github.com/prenio" style="padding:1rem"><b>GitHub</b></a>
-        </div>
-      </div>
-    </div>
+    </nav>
+</header>
 
     <img class="profile" src="static/images/professional.jpg" alt="Profile Picture">
     <h1 class="textPierceL" style="font-size:100px">Pierce Renio</h1>
@@ -149,18 +222,18 @@
     <h4 class="textPierceL" style="margin-bottom:4rem">Gregarious--Positive--Jovial</h4>
 
 
-    <div class="d-flex boxPierceAbout">
+    <div class="d-flex justify-content-center boxPierceAbout">
         
         <div>
             <h1 style="text-align: center;">About Me</h1><br>
-            <p class="textPierceS" style="font-size: 20px;"> Being able to see the world best through numbers has always been my forte and it fuels my passion for data science.
+            <p class="textPierceAboutS"> Being able to see the world best through numbers has always been my forte and it fuels my passion for data science.
                                     At UC Berkeley, I learned the fundamentals of computer science and at ASU, I was
                                     able to refine my programming skills, learn new languages and discover more statistical and data science methods. With my 
                                     abilities I have been able to create several projects, both academic and recreation purposed but always passion based.
                                     Having an academic background to learn data science, statistics, math, and other computer science tools allowed me to 
                                     obtain a diverse toolkit to tackle any problem I have encountered. Some of the languages and tools I know include: </p>
 
-            <div class="d-flex flex-row justify-content-around">
+            <div id="skills" class="d-flex flex-row justify-content-around">
 
                 <div>
                     <p style="text-align: center;"><b>Languages</b></p>
@@ -251,7 +324,7 @@
         </div>
     </div>
 
- <a href="/music.html">here</a>
+ <a href="/1v1.html" style="color:rgb(30,30,30)">It's a secret!</a>
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>

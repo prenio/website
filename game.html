@@ -11,6 +11,12 @@
     <link href="/static/fonts/PokemonFont.css" rel="stylesheet" type="text/css"/>
     
     <style>
+        .bodyGame {
+            background-color:rgb(30,30,30);
+            margin-bottom: 10rem;
+            margin-top: 6rem;
+        }
+
         a:link {
             color: rgb(251, 207, 244);
             background-color: transparent;
@@ -36,9 +42,7 @@
 
         .navPierce {
             color: rgb(251, 207, 244);
-            margin: 1rem;
             font-size: 30px;
-            margin-bottom: 2rem;
         }
     
         .game {
@@ -78,6 +82,31 @@
             text-align: center;
         }
 
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(30, 30, 30);
+        min-width: 160px;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: rgb(251, 207, 244);
+            padding: 12px 16px;
+            display: block;
+            }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+            }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown a:visited{
+            color:rgb(251, 207, 244);
+        }
 
         @font-face {
             font-family: pixelPokemon;
@@ -91,25 +120,36 @@
     </style>
 </head>
 
-<body style="background-color:rgb(30,30,30) ;margin-bottom:10rem" class="h-100">
-    <div style="position:absolute; top: -0.1rem" class="navPierce">
-        <a href="/" style="padding:1rem"><b>PR</b></a>
-    </div>
-    <div class="d-flex justify-content-end navPierce" style="margin-bottom: 2rem">
-        <div>
-            <a href="/" style="padding:1rem"><b>Home</b></a>
-        </div>
-        <div>
-            <a href="/game.html" style="padding:1rem"><b>Typemaster</b></a>
-        </div>
-        <div>
-            <a href="https://www.linkedin.com/in/pierce-renio-757537179" style="padding:1rem"><b>LinkedIn</b></a>
-        </div>
-        <div>
-            <a href="https://github.com/prenio" style="padding:1rem"><b>GitHub</b></a>
-        </div>
-      </div>
-    </div>
+<body class="bodyGame h-100">
+
+    <header>
+        <nav class="navbar navbar-expand navbar-toggleable fixed-top" style="background-color: rgb(30, 30, 30); border-bottom: 2px solid rgb(251, 207, 244);">
+            <div class="container">
+                <a href="/" class="navPierce navbar-nav"><b>PR</b></a>
+                <div class="navbar-collapse collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link navPierce" title="Pierce Renio"><b>Home</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/game.html" class="nav-link navPierce" title="Typemaster"><b>Typemaster</b></a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="nav-item dropdown">
+                            <a href="" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link navPierce dropdown-toggle"><b>Links</b></a>
+                            <div class="dropdown-content">
+                                <a href="https://www.linkedin.com/in/pierce-renio-757537179" class="navPierce"><b>LinkedIn</b></a>
+                                <a href="https://github.com/prenio" class="navPierce"><b>GitHub</b></a>
+                              </div> 
+                            </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <div class="game d-flex flex-column justify-content-evenly" style="font-family: 'pokemon-pixel-font-regular', 'sans-serif';">
         <p id="title" style="text-align:center;font-family: Pokemon; font-size: 100px;">Type Master</p>
