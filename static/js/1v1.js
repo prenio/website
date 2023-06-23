@@ -2,21 +2,28 @@
 // Fully automated
 
 
-import {calculate, Generations, Pokemon, Move} from '@smogon/calc';
+const {calculate, Generations, Pokemon, Move} = calc;
 
 const gen = Generations.get(5); // alternatively: const gen = 5;
+
+var P1SpA = 3
+
 const result = calculate(
   gen,
-  new Pokemon(gen, 'Gengar', {
+  new Pokemon(gen, 'Charizard', {
     item: 'Choice Specs',
-    nature: 'Timid',
+    nature: 'Modest',
     evs: {spa: 252},
-    boosts: {spa: 1},
+    boosts: {spd: 2},
   }),
   new Pokemon(gen, 'Chansey', {
     item: 'Eviolite',
+    ability: 'Justified',
+    abilityOn: true,
     nature: 'Calm',
     evs: {hp: 252, spd: 252},
   }),
   new Move(gen, 'Focus Blast')
 );
+
+console.log(result);
